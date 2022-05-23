@@ -1,6 +1,5 @@
 =Ostagram
-Данное web-приложение является web надстройкой над программой по обработке изображения нейронными сетями. Для создания картин используется сверточные
-нейронные сети и алгоритм художественно стиля by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge. Более подробно с этим можно ознакомиться по ссылке на GitHub ниже.
+This web application is a web add-on for the program for image processing by neural networks. Paintings are created using Convolutional Neural Networks and the Artistic Style Algorithm by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge. More details can be found on the GitHub link below.
 
 This program presents web-service for algorithm combining the content of one image with the style of another image using convolutional neural networks.
 
@@ -11,33 +10,33 @@ Test with Rails 4.2
 
 ==Installation
 
-Для работы web-приложения необходимо создать config.secret в папке config примерно со следующим содержанием:
+For the web application to work, you need to create a config.secret in the config folder with approximately the following content:
 
 ---
 token:
-  production: - ключ сессии
+  production: - session key
 
 workservers:
   server1:
-    host: "deploy" - адрес удаленного сервера для обработки
-    username: "deploy" - логин
-    password: "пароль"
-    remote_neural_path: "/home/deploy/neural-style" - путь где распологается сеть
-    init_params: "-gpu -1 -image_size 100" - строка инициализации для сети
-    iteration_count: 10 - количество итераций обработки
-    admin_email: "почта_админа@gmail.com"
+    host: "deploy" - address of the remote server to be processed
+    username: "deploy" - login
+    password: "password"
+    remote_neural_path: "/home/deploy/neural-style" - the path where the network is located
+    init_params: "-gpu -1 -image_size 100" - network initialization string
+    iteration_count: 10 - number of processing iterations
+    admin_email: "admin_mail@gmail.com"
 
 
 smtp_settings:
   address: 'smtp.gmail.com'
   port: 587
   domain: 'gmail.com'
-  user_name: 'почта_отправки_результата@gmail.com'
-  password: 'пароль'
+  user_name: 'result_sending_mail@gmail.com'
+  password: 'password'
   authentication: 'plain'
   enable_starttls_auto: true
 
 
 ==More Information
 
-Для обработки используется данный алгоритм https://github.com/jcjohnson/neural-style
+This algorithm is used for processing https://github.com/jcjohnson/neural-style
